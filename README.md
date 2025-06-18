@@ -13,7 +13,8 @@
 
 
 ### Вся конфигурация 
-[Конфигурация Terramaster, kubspray, скрипты](https://github.com/rbudarin/src-for-diplom)
+[Конфигурация Terraform, kubspray, скрипты](https://github.com/rbudarin/src-for-diplom)
+
 ---
 ## Цели:
 
