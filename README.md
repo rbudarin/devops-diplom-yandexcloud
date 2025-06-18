@@ -11,6 +11,9 @@
 
 **Перед началом работы над дипломным заданием изучите [Инструкция по экономии облачных ресурсов](https://github.com/netology-code/devops-materials/blob/master/cloudwork.MD).**
 
+
+### Вся конфигурация 
+[Конфигурация Terramaster, kubspray, скрипты](https://github.com/rbudarin/src-for-diplom)
 ---
 ## Цели:
 
@@ -613,6 +616,7 @@ git push --force origin main
 ![git03](https://github.com/rbudarin/devops-diplom-yandexcloud/blob/main/screen/git03.png)
 ![git04](https://github.com/rbudarin/devops-diplom-yandexcloud/blob/main/screen/git04.png)
 
+[test-app-deploy](https://github.com/rbudarin/test-app-deploy)
 ---
 ## Что необходимо для сдачи задания?
 
