@@ -355,8 +355,8 @@ kubectl describe svc -n monitoring kube-prometheus-stack-grafana
 # kubectl delete ns monitoring
 ```
 ![grafana01](https://github.com/rbudarin/devops-diplom-yandexcloud/blob/main/screen/grafana01.png)
-![gf_metriki01]https://github.com/rbudarin/devops-diplom-yandexcloud/blob/main/screen/gf_metriki01.png)
-![gf_metriki02]https://github.com/rbudarin/devops-diplom-yandexcloud/blob/main/screen/gf_metriki02.png)
+![gf_metriki01](https://github.com/rbudarin/devops-diplom-yandexcloud/blob/main/screen/gf_metriki01.png)
+![gf_metriki02](https://github.com/rbudarin/devops-diplom-yandexcloud/blob/main/screen/gf_metriki02.png)
 
 Создадим файл deployment.yaml для развёртывания приложения в Kubernetes:
 ```
