@@ -73,6 +73,7 @@ tree ./terraform
 ![tree](https://github.com/rbudarin/devops-diplom-yandexcloud/blob/main/screen/tree.png)
 
 ## Создааем сервисные аккаунты
+```
 resource "yandex_iam_service_account" "terraform" {
   name        = "tf-srv-account"
   description = "Service account for Terraform"
@@ -93,8 +94,10 @@ resource "yandex_resourcemanager_folder_iam_binding" "storage_admin" {
     "serviceAccount:${yandex_iam_service_account.terraform.id}",
   ]
 }
+```
 
 ### Подготовливаем s3-bucket под backend
+```
 ## Static access key for bucket
 resource "yandex_iam_service_account_static_access_key" "sa-static-key" {
   service_account_id = yandex_iam_service_account.terraform.id
@@ -117,6 +120,7 @@ resource "yandex_storage_bucket" "storage_bucket" {
     enabled = true
   }
 }
+```
 
 ## Собираем конфигурацию
 ```
@@ -154,12 +158,14 @@ terraform apply -auto-approve
 4. Создайте VPC с подсетями в разных зонах доступности.
 
 ## Создаем VPC через foreach и locals
+```
 ##______________VPC______________________
 resource "yandex_vpc_network" "network" {
   name = "main-network"
 }
-
+```
 # Создание подсетей с использованием locals
+```
 resource "yandex_vpc_subnet" "subnets" {
   for_each = local.subnets
 
@@ -186,6 +192,7 @@ locals {
   }
 }
 ##_______________________________________
+```
 
 ![network-subnet](https://github.com/rbudarin/devops-diplom-yandexcloud/blob/main/screen/network-subnet.png)
 
@@ -351,6 +358,8 @@ mkdir test-app
 cd !$
 touch manifest
 ```
+
+```
 ##_______________manifest___________________
 ---
 apiVersion: apps/v1
@@ -385,6 +394,7 @@ spec:
   selector:
     app: nginx-app
 ##_______________________________________
+```
 
 # Создадим namespace и задиплоим
 ```
@@ -403,6 +413,8 @@ kubectl delete ns test-app
 mkdir -p test-app/templates
 touch test-app{chart.yaml,values.yaml}
 touch test-app/templates/deployment.yaml
+```
+
 ```
 ##_______________chart___________________
 echo 'apiVersion: v2
@@ -461,6 +473,7 @@ spec:
       port: 80
       nodePort: {{ .Values.service.nodePort }}' > test-app/templates/deployment.yaml
 ##_______________________________________
+```
 
 ## Проверяем
 ```
@@ -552,6 +565,7 @@ mkdir -p actions/.github/workflows
 cd !$
 ```
 Создадим файл для описания процесса развёртывания в GitHub Actions:
+```
 ##_____________workflows________________________
 name: Build and Deploy
 
@@ -598,6 +612,8 @@ jobs:
         export KUBECONFIG=kubeconfig
         kubectl apply -f deployment.yaml && kubectl apply -f service.yaml
   ##_______________________________________________
+```
+
  ## структруа
  ![tree](https://github.com/rbudarin/devops-diplom-yandexcloud/blob/main/screen/tree.png)
 
