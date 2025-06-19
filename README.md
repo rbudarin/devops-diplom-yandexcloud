@@ -70,7 +70,7 @@ touch terraform/{backend.tf,vpc.tf,variables.tf,providers.tf}
 Смотрим структуру:
 tree ./terraform
 ```
-![tree](https://github.com/rbudarin/devops-diplom-yandexcloud/blob/main/screen/tree.png)
+![tree01](https://github.com/rbudarin/devops-diplom-yandexcloud/blob/main/screen/tree01.png)
 
 ## Создааем сервисные аккаунты
 ```
