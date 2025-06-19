@@ -48,6 +48,7 @@
 ## Смотрим cloud-id:... folder-id: ...
 yc config list
 ## Настройкая зеркала
+```
 ##______________Config__________________
 provider_installation {
   network_mirror {
@@ -59,6 +60,7 @@ provider_installation {
   }
 }
 ##_______________________________________
+```
 ## Создаем проект:
 ```
 mkdir -p terraform/storage
