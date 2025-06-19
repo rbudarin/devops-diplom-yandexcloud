@@ -329,9 +329,7 @@ docker push rbudarin/nginx:v0.1
 mkdir -p monitoring && cd !$
 touch values.yaml
 ```
-```
-helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
-helm repo update
+
 ```
 ##_________________values___________________
 grafana:
@@ -343,10 +341,18 @@ grafana:
     nodePort: 30081
 ##__________________________________________
 ```
+
+```
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+helm repo update
+```
+
+```
 helm install kube-prometheus-stack prometheus-community/kube-prometheus-stack --create-namespace -n monitoring -f values
 kubectl get svc -n monitoring kube-prometheus-stack-grafana -o wide
 kubectl describe svc -n monitoring kube-prometheus-stack-grafana
-kubectl delete ns monitoring
+
+# kubectl delete ns monitoring
 ```
 ![grafana01](https://github.com/rbudarin/devops-diplom-yandexcloud/blob/main/screen/grafana01.png)
 ![gf_metriki01]https://github.com/rbudarin/devops-diplom-yandexcloud/blob/main/screen/gf_metriki01.png)
