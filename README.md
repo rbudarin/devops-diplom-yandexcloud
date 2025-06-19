@@ -411,7 +411,10 @@ kubectl apply -f manifest -n test-app
 ![test_app01](https://github.com/rbudarin/devops-diplom-yandexcloud/blob/main/screen/test_app01.png)
 ![test-app-deploy](https://github.com/rbudarin/devops-diplom-yandexcloud/blob/main/screen/test-app-deploy.png)
 
+# Удаляем тестовое приложение
+```
 kubectl delete ns test-app
+```
 
 ## Подготовка Helm чарта для созданного приложения
 ## через helm
