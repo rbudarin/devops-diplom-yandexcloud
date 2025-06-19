@@ -409,7 +409,7 @@ kubectl apply -f manifest -n test-app
 ```
 ![test-app](https://github.com/rbudarin/devops-diplom-yandexcloud/blob/main/screen/test-app.png)
 ![test_app01](https://github.com/rbudarin/devops-diplom-yandexcloud/blob/main/screen/test_app01.png)
-![test-app-deploy](https://github.com/rbudarin/devops-diplom-yandexcloud/blob/main/screen/test-app-detest-app-deployploy.png)
+![test-app-deploy](https://github.com/rbudarin/devops-diplom-yandexcloud/blob/main/screen/test-app-deploy.png)
 
 kubectl delete ns test-app
 
