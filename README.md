@@ -617,7 +617,13 @@ git push --force origin main
 ![git03](https://github.com/rbudarin/devops-diplom-yandexcloud/blob/main/screen/git03.png)
 ![git04](https://github.com/rbudarin/devops-diplom-yandexcloud/blob/main/screen/git04.png)
 
+# Проверяем в докере, все пушиться с тегом
+![git05]https://github.com/rbudarin/devops-diplom-yandexcloud/blob/main/screen/git05.png)
 [test-app-deploy](https://github.com/rbudarin/test-app-deploy)
+
+# Docker Hub
+[docker_hub](https://hub.docker.com/repository/docker/rbudarin/nginx/tags)
+
 ---
 ## Что необходимо для сдачи задания?
 
