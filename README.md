@@ -652,6 +652,27 @@ git push --force origin main
 ## [docker_hub](https://hub.docker.com/repository/docker/rbudarin/nginx/tags)
 
 ---
+## Доработка:
+исправил файл [workflows](https://github.com/rbudarin/test-app-deploy/blob/main/.github/workflows/docke_image.yml)
+
+## Протестировал без тега образ собираеться но не деплоится
+
+[git](https://github.com/rbudarin/test-app-deploy/actions/runs/15911970021)
+[docker_hub](https://hub.docker.com/repository/docker/rbudarin/nginx/tags/main/sha256:fcf6bbab387a41161882a5b0414ff6dd63f63a8776b12e89729c90a3d62957c8)
+
+![without_tag01](https://github.com/rbudarin/devops-diplom-yandexcloud/blob/main/screen/without_tag01.png)
+![without_tag02](https://github.com/rbudarin/devops-diplom-yandexcloud/blob/main/screen/without_tag02.png)
+![without_tag03](https://github.com/rbudarin/devops-diplom-yandexcloud/blob/main/screen/without_tag03.png)
+
+## Протестировал c тегом образ собираеться и деплоится
+[git](https://github.com/rbudarin/test-app-deploy/actions/runs/15912218021)
+[docker_hub](https://hub.docker.com/repository/docker/rbudarin/nginx/tags/v2.2/sha256-3f69774a0d9c5e8a58319a4b2e84af6a6fbe93810c261dde70468137433dfe1d)
+
+![with_tag01](https://github.com/rbudarin/devops-diplom-yandexcloud/blob/main/screen/with_tag01.png)
+![with_tag02](https://github.com/rbudarin/devops-diplom-yandexcloud/blob/main/screen/with_tag02.png)
+![with_tag03](https://github.com/rbudarin/devops-diplom-yandexcloud/blob/main/screen/with_tag03.png)
+
+---
 ## Что необходимо для сдачи задания?
 
 1. Репозиторий с конфигурационными файлами Terraform и готовность продемонстрировать создание всех ресурсов с нуля.
